@@ -1,8 +1,8 @@
 class CreateCards < ActiveRecord::Migration[5.1]
   def change
     create_table :cards do |t|
-      t.string :type
-      t.integer :type_id
+      t.integer :properties_id
+      t.string :properties_type
 
       t.timestamps
     end

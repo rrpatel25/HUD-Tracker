@@ -1,4 +1,3 @@
 class Card < ApplicationRecord
-  # Type
-  # type_id
+  belongs_to :properties, polymorphic: true, optional: true
 end
