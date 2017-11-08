@@ -1,4 +1,7 @@
+# user class to store auth info. and transactional relationships
 class User < ApplicationRecord
-  # username
-  # password_digest
+  include BCrypt
+  validates :username, :password_digest, presence: true
+  validates :username, uniqueness: true
+  validate :password_length
 end
