@@ -1,7 +1,7 @@
 class CreateCoaches < ActiveRecord::Migration[5.1]
   def change
     create_table :coaches do |t|
-      t.string :name, uniqueness: true
+      t.string :name
       t.text :synergies
       t.string :level_code
 
