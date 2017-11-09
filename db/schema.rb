@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20171108022908) do
   end
 
   create_table "cards", force: :cascade do |t|
-    t.integer "properties_id"
-    t.string "properties_type"
+    t.integer "item_id"
+    t.string "item_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
