@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108022908) do
+ActiveRecord::Schema.define(version: 20171110002555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20171108022908) do
   end
 
   create_table "cards", force: :cascade do |t|
-    t.integer "properties_id"
-    t.string "properties_type"
+    t.integer "item_id"
+    t.string "item_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,12 +37,36 @@ ActiveRecord::Schema.define(version: 20171108022908) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "collections", force: :cascade do |t|
+    t.string "code"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_collections_on_code", unique: true
+  end
+
+  create_table "contracts", force: :cascade do |t|
+    t.string "level_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "levels", force: :cascade do |t|
     t.string "code"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_levels_on_code", unique: true
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.text "synergies"
+    t.string "collection_code"
+    t.string "level_code"
+    t.string "overall_rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "transactions", force: :cascade do |t|
