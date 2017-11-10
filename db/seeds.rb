@@ -1,7 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Seed file should contain each of the classes, showcasing relationships
+# Use of faker?
+# Type of user information?
+
+# Level seeds for lookup organization
+Level.create!(code: "bronze", description: "Bronze")
+Level.create!(code: "silver", description: "Silver")
+Level.create!(code: "gold", description: "Gold")
