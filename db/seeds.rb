@@ -6,3 +6,6 @@
 Level.create!(code: "bronze", description: "Bronze")
 Level.create!(code: "silver", description: "Silver")
 Level.create!(code: "gold", description: "Gold")
+
+Synergy.create!(code: "LL", description: "Locker Room Leader")
+Synergy.create!(code: "S", description: "Silky Smooth")
