@@ -97,3 +97,6 @@ collections = [
 collections.each do |code, description|
   Collection.create!(code: code, description: description)
 end
+
+Synergy.create!(code: "LL", description: "Locker Room Leader")
+Synergy.create!(code: "S", description: "Silky Smooth")
