@@ -176,3 +176,81 @@ synergies = [
 synergies.each do |synergy|
   Synergy.create!(code: synergy[:code], description: synergy[:description])
 end
+
+collectable_types = [
+  {
+    code: 'BASIC',
+    description: 'Basic'
+  },
+  {
+    code: 'EVO',
+    description: 'Evolution'
+  },
+  {
+    code: 'FB',
+    description: 'Flashback'
+  },
+  {
+    code: 'FF',
+    description: 'Flash Forward'
+  },
+  {
+    code: 'PT',
+    description: 'Prime Time'
+  },
+  {
+    code: 'MS',
+    description: 'Milestone'
+  },
+  {
+    code: 'FO',
+    description: 'Face Off'
+  },
+  {
+    code: 'TOTW',
+    description: 'Team of the Week'
+  },
+  {
+    code: 'SOTM',
+    description: 'Stars of thte Month'
+  },
+  {
+    code: 'CC',
+    description: 'Centenial'
+  },
+  {
+    code: 'MOV',
+    description: 'Movember'
+  },
+  {
+    code: 'HFC',
+    description: 'Hockey Fights Cancer'
+  },
+  {
+    code: 'HWN',
+    description: 'Halloween'
+  }
+]
+
+collectable_types.each do |type|
+  CollectableType.create!(code: type[:code], description: type[:description])
+end
+
+team_information_types = [
+  {
+    code: 'logo',
+    description: 'Logo'
+  },
+  {
+    code: 'jersey',
+    description: 'Jersey'
+  },
+  {
+    code: 'arena',
+    description: 'Arena'
+  }
+]
+
+team_information_types.each do |type|
+  TeamInformationType.create!(code: type[:code], description: type[:description])
+end
